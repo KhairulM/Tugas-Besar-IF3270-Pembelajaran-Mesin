@@ -47,9 +47,10 @@ iris_train_instances, iris_test_instances, iris_train_targets, iris_test_targets
 test_instances = [[1, 1], [0, 0]]
 test_targets = []
 
-id = C45(iris_train_instances,iris_train_targets)
+id = ID3(tennis_train_instances,tennis_train_targets)
 id.fit(id.instances,id.targets)
-print(id.predict(iris_test_instances))
+print("Predicted : ", id.predict(tennis_train_instances))
+print("Actual : ", tennis_train_targets)
 
 # Node testing
 """ instances = [[0, 1, 2], [2, 1, 0]]

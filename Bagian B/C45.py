@@ -2,7 +2,6 @@ import os
 import pandas
 from DTL import DecisionTree, Node
 from math import log2
-from icecream import ic
 from ID3 import ID3
 
 class C45(DecisionTree):
@@ -25,10 +24,9 @@ class C45(DecisionTree):
         arr_target = pandas.DataFrame(arr_target)
         arr_instans = df.assign(target = arr_target.values)
 
-        ic(arr_instans)
 
         #pre-process continuous valued attribute
-        arr_instans = self.continuous_value(arr_instans)
+        ##arr_instans = self.continuous_value(arr_instans)
 
         #pre-process missing value attribute
         arr_instans = self.missing_value_handler(arr_instans)
